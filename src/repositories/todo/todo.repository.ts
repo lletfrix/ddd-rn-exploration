@@ -3,7 +3,20 @@ import { TodoEntity } from "@/src/domain/todo/todo.entity";
 import { TodoType } from "./todo.type";
 
 export class TodoRepository implements RepositoryInterface<TodoEntity, TodoType> {
-  private todos: TodoType[] = [];
+  // This is a fake database.
+  private todos: TodoType[] = [{
+    id: '1',
+    title: 'Todo 1',
+    description: 'Description 1',
+    completed: false,
+    createdAt: new Date(),
+  }, {
+    id: '2',
+    title: 'Todo 2',
+    description: 'Description 2',
+    completed: false,
+    createdAt: new Date(),
+  }];
 
   async select(): Promise<TodoEntity[]> {
     return this.todos.map((todo) => this.toDomain(todo));

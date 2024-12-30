@@ -16,4 +16,13 @@ export class TodoModel {
     this.entity.completed = !this.entity.completed;
     return this;
   }
+
+  public() {
+    return {
+      id: this.entity.id,
+      title: this.entity.title,
+      description: this.entity.description,
+      completed: this.entity.completed,
+    };
+  }
 }

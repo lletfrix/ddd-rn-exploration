@@ -1,6 +1,6 @@
 import { RepositoryInterface } from "@/src/interfaces/repository.interface";
-import { TodoModel } from "../todo/todo.model";
+import { TodoEntity } from "../todo/todo.entity";
 
 export interface MainRepositoryInterface {
-  todo: RepositoryInterface<TodoModel>;
+  todo: RepositoryInterface<TodoEntity>;
 }
